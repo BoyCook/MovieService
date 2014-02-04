@@ -114,7 +114,7 @@
                 <configuration>
                     <scanIntervalSeconds>-1</scanIntervalSeconds>
                     <contextPath>/</contextPath>
-                    <webAppSourceDirectory>src/test/webapp</webAppSourceDirectory>
+                    <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
                             <port>9001</port>

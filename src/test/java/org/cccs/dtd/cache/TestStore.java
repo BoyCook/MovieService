@@ -1,6 +1,5 @@
 package org.cccs.dtd.cache;
 
-import org.cccs.dtd.domain.Entity;
 import org.cccs.dtd.domain.Movie;
 import org.junit.Before;
 import org.junit.Test;
