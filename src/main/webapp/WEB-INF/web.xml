@@ -7,7 +7,7 @@
     <display-name>HTTP proxy servlet</display-name>
     <servlet>
         <servlet-name>servlet</servlet-name>
-        <servlet-class>org.cccs.dtd.MovieServlet</servlet-class>
+        <servlet-class>org.cccs.dtd.web.MovieServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>

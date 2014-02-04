@@ -1,4 +1,4 @@
-package org.cccs.dtd;
+package org.cccs.dtd.web;
 
 import com.google.gson.Gson;
 import org.cccs.dtd.cache.Store;
