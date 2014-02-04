@@ -29,8 +29,10 @@ public class TestServlet extends AbstractJMockTestSupport {
 
     @Test
     public void getByIdShouldWork() throws IOException, ServletException {
+        String [] ids = {"1107c22a3-7b52-4351-894f-7e9040a9a4e6"};
         one(response).setContentType("application/json");
         one(request).getParameterValues("id");
+        will(returnValue(ids));
         one(response).getWriter();
         confirmExpectations();
         new MovieServlet().doGet(request, response);
