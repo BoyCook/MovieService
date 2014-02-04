@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.UUID;
 
 import static java.lang.String.format;
 
@@ -32,8 +33,14 @@ public class MovieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         System.out.println("MovieServlet.doGet");
         res.setContentType("application/json");
-//        req.getParameterValues("id");
-        res.getWriter().println(new Gson().toJson(store.getAll()));
+
+        String id = getParameter(req, "id");
+
+        if (id != null) {
+            res.getWriter().println(new Gson().toJson(store.getItem(UUID.fromString(id))));
+        } else {
+            res.getWriter().println(new Gson().toJson(store.getAll()));
+        }
     }
 
     @Override
@@ -55,4 +62,17 @@ public class MovieServlet extends HttpServlet {
         System.out.println("MovieServlet.doDelete");
         super.doDelete(req, res);
     }
+
+
+    private String getParameter(HttpServletRequest req, String name) {
+        String[] values = req.getParameterValues(name);
+
+        if (values == null || values.length == 0) {
+            return null;
+        } else {
+            return values[0];
+        }
+    }
+
 }
+
