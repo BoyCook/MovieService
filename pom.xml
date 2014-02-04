@@ -117,9 +117,6 @@
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>2.1.0</version>
-                <configuration>
-                    <repoToken>21HvIlBFwFWHDF0rxtpKPaukkh7PjCNW9</repoToken>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
