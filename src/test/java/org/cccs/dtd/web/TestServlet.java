@@ -49,6 +49,17 @@ public class TestServlet extends AbstractJMockTestSupport {
     }
 
     @Test
+    public void getAllShouldWorkForEmptyArray() throws IOException, ServletException {
+        String [] ids = {};
+        one(response).setContentType("application/json");
+        one(request).getParameterValues("id");
+        will(returnValue(ids));
+        one(response).getWriter();
+        confirmExpectations();
+        new MovieServlet().doGet(request, response);
+    }
+
+    @Test
     public void putShouldWork() throws IOException, ServletException {
         String [] names = {"name1"};
         String [] descriptions = {"description1"};
