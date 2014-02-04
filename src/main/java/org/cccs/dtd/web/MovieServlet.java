@@ -11,13 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.UUID;
 
-import static java.lang.String.format;
+import javax.servlet.annotation.WebServlet;
+
 
 /**
  * User: boycook
  * Date: 18/04/2012
  * Time: 12:55
  */
+@WebServlet
 public class MovieServlet extends HttpServlet {
 
     private Store store;
