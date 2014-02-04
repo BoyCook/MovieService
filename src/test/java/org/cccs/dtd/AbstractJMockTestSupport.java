@@ -1,4 +1,4 @@
-package org.cccs.proxy;
+package org.cccs.dtd;
 
 /**
  * User: boycook
