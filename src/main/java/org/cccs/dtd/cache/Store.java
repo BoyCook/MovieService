@@ -11,7 +11,7 @@ import java.util.UUID;
  */
 public class Store {
 
-    private Map<UUID, Entity> entities = new HashMap<UUID, Entity>() ;
+    private Map<UUID, Entity> entities = new HashMap<>() ;
 
     public void addItem(final Entity entity) {
         entities.put(entity.getId(), entity);
@@ -21,8 +21,9 @@ public class Store {
         entities.remove(id);
     }
 
-    public Entity getItem(UUID id) {
-        return entities.get(id);
+    @SuppressWarnings("unchecked")
+    public <T extends Entity> T getItem(UUID id) {
+        return (T) entities.get(id);
     }
 
     public int size() {

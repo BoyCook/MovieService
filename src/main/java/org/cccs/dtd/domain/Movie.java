@@ -8,7 +8,7 @@ import java.util.UUID;
 public class Movie extends AbstractEntity implements Entity {
 
     public Movie() {
-        super(null, null, null, Type.MOVIE);
+        super(UUID.randomUUID(), null, null, Type.MOVIE);
     }
 
     protected Movie(UUID id, String name, String description) {
