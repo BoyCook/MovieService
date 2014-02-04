@@ -10,6 +10,10 @@ public class Movie extends AbstractEntity implements Entity {
         this(null, null);
     }
 
+    public Movie(UUID id) {
+        this(id, null, null);
+    }
+
     public Movie(String name, String description) {
         this(UUID.randomUUID(), name, description);
     }

@@ -7,7 +7,7 @@ import java.util.UUID;
  */
 public abstract class AbstractEntity implements Entity {
 
-    private UUID id;
+    private final UUID id;
     private String name;
     private String description;
     private Type type;
@@ -21,10 +21,6 @@ public abstract class AbstractEntity implements Entity {
 
     public UUID getId() {
         return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -47,7 +43,4 @@ public abstract class AbstractEntity implements Entity {
         return type;
     }
 
-    public void setType(Type type) {
-        this.type = type;
-    }
 }
