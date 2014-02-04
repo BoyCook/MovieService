@@ -3,7 +3,7 @@
 
 ### DESCRIPTION
 
-A simple service to store movies
+A simple movie catalogue service, for use on the developer training day
 
 ### Building
 
