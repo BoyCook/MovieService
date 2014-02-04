@@ -60,9 +60,9 @@ public class MovieServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         System.out.println("MovieServlet.doDelete");
-        super.doDelete(req, res);
+        String id = getParameter(req, "id");
+        this.store.removeItem(UUID.fromString(id));
     }
-
 
     private String getParameter(HttpServletRequest req, String name) {
         String[] values = req.getParameterValues(name);
@@ -73,6 +73,5 @@ public class MovieServlet extends HttpServlet {
             return values[0];
         }
     }
-
 }
 

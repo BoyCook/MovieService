@@ -50,7 +50,6 @@ public class TestServlet extends AbstractJMockTestSupport {
     public void putShouldWork() throws IOException, ServletException {
         String [] names = {"name1"};
         String [] descriptions = {"description1"};
-        one(response).setContentType("application/json");
         one(request).getParameterValues("name");
         will(returnValue(names));
         one(request).getParameterValues("description");
@@ -59,17 +58,24 @@ public class TestServlet extends AbstractJMockTestSupport {
         new MovieServlet().doPut(request, response);
     }
 
-
     @Test
     public void postShouldWork() throws IOException, ServletException {
         String [] names = {"name1"};
         String [] descriptions = {"description1"};
-        one(response).setContentType("application/json");
         one(request).getParameterValues("name");
         will(returnValue(names));
         one(request).getParameterValues("description");
         will(returnValue(descriptions));
         confirmExpectations();
         new MovieServlet().doPost(request, response);
+    }
+
+    @Test
+    public void deleteShouldWork() throws IOException, ServletException {
+        String [] ids = {"1107c22a3-7b52-4351-894f-7e9040a9a4e6"};
+        one(request).getParameterValues("id");
+        will(returnValue(ids));
+        confirmExpectations();
+        new MovieServlet().doDelete(request, response);
     }
 }
