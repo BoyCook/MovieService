@@ -6,9 +6,12 @@ import java.util.UUID;
  * Created by boycook on 04/02/2014.
  */
 public class Movie extends AbstractEntity implements Entity {
-
     public Movie() {
-        super(UUID.randomUUID(), null, null, Type.MOVIE);
+        this(null, null);
+    }
+
+    public Movie(String name, String description) {
+        this(UUID.randomUUID(), name, description);
     }
 
     protected Movie(UUID id, String name, String description) {
