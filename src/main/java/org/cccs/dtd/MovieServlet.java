@@ -21,4 +21,22 @@ public class MovieServlet extends HttpServlet {
         res.setContentType("application/json");
         res.getWriter().println("{ \"movies\": [],  \"status\": \"success\" }");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        System.out.println("MovieServlet.doPost");
+        super.doPost(req, res);
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        System.out.println("MovieServlet.doPut");
+        super.doPut(req, res);
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        System.out.println("MovieServlet.doDelete");
+        super.doDelete(req, res);
+    }
 }
