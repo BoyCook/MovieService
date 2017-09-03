@@ -12,5 +12,5 @@ after_success:
   - mvn clean package cobertura:cobertura coveralls:cobertura
   - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r  target/site/cobertura/coverage.xml
 
-script:
-    - package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
+# script:
+#     - package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
