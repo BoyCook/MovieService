@@ -6,6 +6,12 @@
 
 A simple movie catalogue service, for use on the developer training day
 
+### Running
+
+Jetty
+
+    mvn jety:run
+
 ### Building
 
 Tests

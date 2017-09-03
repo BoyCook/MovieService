@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.cccs.dtd</groupId>
     <artifactId>movie-service</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>Movie Service</name>
     <organization>
@@ -86,7 +86,7 @@
     </dependencies>
 
     <build>
-        <finalName>services</finalName>
+        <finalName>movie-service</finalName>
         <filters>
             <filter>src/main/filter/${filter}.properties</filter>
         </filters>
@@ -148,7 +148,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>            
+            </plugin>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>

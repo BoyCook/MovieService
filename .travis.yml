@@ -13,4 +13,4 @@ after_success:
   - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r  target/site/cobertura/coverage.xml
 
 script:
-    - package_cloud push boycook/snapshots/org/cccs/ /home/travis/.m2/repository/org/cccs/dtd/movie-service/1.0.0-SNAPSHOT/movie-service-1.0.0-SNAPSHOT.war
+    - package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
