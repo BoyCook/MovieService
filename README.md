@@ -10,7 +10,7 @@ A simple movie catalogue service, for use on the developer training day
 
 Jetty
 
-    mvn jety:run
+    java -jar target/movie-service.jar
 
 ### Building
 
