@@ -8,7 +8,7 @@ A simple movie catalogue service, for use on the developer training day
 
 ### Running
 
-Jetty
+Spring Boot
 
     java -jar target/movie-service.jar
 
