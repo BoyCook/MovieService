@@ -1,10 +1,16 @@
 java:
 - "1.7"
 language: java
-script: mvn clean test
+script: mvn clean package
+
 before_install:
+  - gem install package_cloud
   - sudo apt-get install jq
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
+
 after_success:
   - mvn clean cobertura:cobertura coveralls:cobertura
-  - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
+  - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r  target/site/cobertura/coverage.xml
+
+script:
+    - package_cloud push boycook/releases/org/cccs/ target/services.war
