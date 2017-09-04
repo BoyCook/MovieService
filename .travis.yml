@@ -10,6 +10,7 @@ cache:
 
 before_install:
   - sudo apt-get install jq
+  - chmod +x scripts/JMeterInstaller.py
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
 
 jobs:
@@ -34,3 +35,8 @@ jobs:
         region: "eu-west-2"
         app: "movie-service"
         env: "movie-service-test"
+    - stage: performance test
+      script:
+        - rm -rf results && mkdir results
+        - apache-jmeter-3.0/bin/jmeter.sh -j results/jmeter.log -p tests/jmeter.properties -t scripts/load_test.jmx -n -l results/load_test.jtl
+        - scripts/generate_files_from_jtl.sh load_test

@@ -1,3 +1,5 @@
 .idea
 target
 .DS_Store
+apache-jmeter-3.0
+jmeter.log
