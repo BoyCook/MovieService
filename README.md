@@ -35,3 +35,4 @@ Coverage
 * https://console.aws.amazon.com/iam/home?#/security_credential
 * https://github.com/metaeducation/ren-c/wiki/Create-Travis-s3-Deployment-Credentials
 * https://renzo.lucioni.xyz/s3-deployment-with-travis/
+* https://docs.travis-ci.com/user/build-stages/
