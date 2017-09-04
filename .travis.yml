@@ -16,6 +16,7 @@ after_success:
 #     - package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
 
 deploy:
+  artifact: target/movie-service.jar
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY

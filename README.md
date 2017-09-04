@@ -29,3 +29,5 @@ Coverage
 * https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
 * https://docs.travis-ci.com/user/deployment/elasticbeanstalk/#Environment-variables
 * https://console.aws.amazon.com/iam/home?#/security_credential
+* https://github.com/metaeducation/ren-c/wiki/Create-Travis-s3-Deployment-Credentials
+* https://renzo.lucioni.xyz/s3-deployment-with-travis/
