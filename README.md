@@ -13,11 +13,11 @@ A simple movie catalogue service used for developer training
 
 Spring Boot
 
-    java -jar target/movie-service.jar
+    java -jar target/movie-service.jar --server.port=5000
 
 Build and run
 
-    mvn clean package && java -jar target/movie-service.jar
+    mvn clean package && java -jar target/movie-service.jar --server.port=5000
 
 ### Building
 
@@ -28,6 +28,10 @@ Tests
 Coverage
 
     mvn clean cobertura:cobertura
+    
+Publish artifact
+ 
+    mvn -s .travis.settings.xml clean deploy
 
 ### References
 

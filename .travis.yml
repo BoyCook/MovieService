@@ -3,9 +3,10 @@ java:
 language: java
 
 cache:
+  bundler: true
   directories:
-  - .autoconf
-  - $HOME/.m2
+    - .autoconf
+    - $HOME/.m2
 
 before_install:
   - sudo apt-get install jq
@@ -21,7 +22,7 @@ jobs:
     - stage: publish artifact
       script: mvn -s .travis.settings.xml clean deploy
       skip_cleanup: true
-    - stage: deploy to cloud
+    - stage: deploy to test
       script: mvn clean package
       deploy:
         provider: elasticbeanstalk
