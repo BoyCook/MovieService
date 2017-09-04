@@ -6,6 +6,8 @@
 
 A simple movie catalogue service, for use on the developer training day
 
+http://movie-service.eu-west-2.elasticbeanstalk.com
+
 ### Running
 
 Spring Boot

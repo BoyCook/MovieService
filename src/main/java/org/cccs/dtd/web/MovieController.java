@@ -21,6 +21,7 @@ public class MovieController {
         this.store.addItem(new Movie("Star Wars IV", "A New Hope"));
         this.store.addItem(new Movie("Star Wars V", "The Empire Strikes Back"));
         this.store.addItem(new Movie("Star Wars VI", "Return of the Jedi"));
+        this.store.addItem(new Movie("Star Wars I", "The Phantom Menace"));
     }
 
     @RequestMapping("/movies")

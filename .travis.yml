@@ -1,5 +1,5 @@
 java:
-- "1.7"
+- "1.8"
 language: java
 script: mvn clean package
 
@@ -22,5 +22,5 @@ deploy:
     secure: ...
   region: "eu-west-2"
   app: "movie-service"
-  env: "movie-service-environment"
-  bucket_name: "webapp-bucket"
+  env: "movie-service-prod"
+  bucket_name: "arn:aws:s3:::elasticbeanstalk-eu-west-2-729843718962"
