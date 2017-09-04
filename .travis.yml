@@ -40,6 +40,7 @@ jobs:
       script: mvn clean package #&& package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
       deploy:
         provider: packagecloud
+        skip_cleanup: true
         artifact: target/movie-service.jar
         repository: "snapshots"
         username: "boycook"
