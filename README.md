@@ -21,3 +21,9 @@ Tests
 Coverage
 
     mvn clean cobertura:cobertura
+
+### References
+
+* https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
+* https://docs.travis-ci.com/user/deployment/elasticbeanstalk/#Environment-variables
+* https://console.aws.amazon.com/iam/home?#/security_credential
