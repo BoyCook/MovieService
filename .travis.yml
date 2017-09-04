@@ -36,5 +36,5 @@ jobs:
     - stage: performance test
       script:
         - rm -rf results && mkdir results
-        - apache-jmeter-3.0/bin/jmeter.sh -j results/jmeter.log -p tests/jmeter.properties -t scripts/load_test.jmx -n -l results/load_test.jtl
+        - apache-jmeter-3.0/bin/jmeter.sh -j results/jmeter.log -p scripts/jmeter.properties -t scripts/load_test.jmx -n -l results/load_test.jtl
         - scripts/generate_files_from_jtl.sh load_test
