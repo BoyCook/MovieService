@@ -17,10 +17,8 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: "encrypted"
-  secret_access_key:
-    secure: "encrypted"
+  access_key_id: ...
+  secret_access_key: ...
   region: "eu-west-2"
   app: "movie-service"
   env: "movie-service-prod"
