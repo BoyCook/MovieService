@@ -1,27 +1,49 @@
 java:
 - "1.8"
 language: java
-script: mvn clean package
+#script: mvn clean package
 
 before_install:
   - gem install package_cloud
   - sudo apt-get install jq
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
 
-after_success:
-  - mvn clean package cobertura:cobertura coveralls:cobertura
-  - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r  target/site/cobertura/coverage.xml
+#after_success:
+#  - mvn clean package cobertura:cobertura coveralls:cobertura
+#  - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r  target/site/cobertura/coverage.xml
 
 # script:
 #     - package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
 
-deploy:
-  skip_cleanup: true
-  zip_file: target/movie-service.jar
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket_name: $AWS_BUCKET_NAME
-  region: "eu-west-2"
-  app: "movie-service"
-  env: "movie-service-prod"
+#deploy:
+#  provider: elasticbeanstalk
+#  skip_cleanup: true
+#  zip_file: target/movie-service.jar
+#  access_key_id: $AWS_ACCESS_KEY_ID
+#  secret_access_key: $AWS_SECRET_ACCESS_KEY
+#  bucket_name: $AWS_BUCKET_NAME
+#  region: "eu-west-2"
+#  app: "movie-service"
+#  env: "movie-service-prod"
+
+#    - stage: publish artifact
+#      script: package_cloud push boycook/snapshots/org/cccs/ target/movie-service.jar
+
+jobs:
+  include:
+    - stage: build
+      script: mvn clean compile
+    - stage: test
+      script: mvn clean test cobertura:cobertura coveralls:cobertura && java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r target/site/cobertura/coverage.xml
+    - stage: deploy to AWS
+      script: mvn clean package
+      deploy:
+        provider: elasticbeanstalk
+        skip_cleanup: true
+        zip_file: target/movie-service.jar
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        bucket_name: $AWS_BUCKET_NAME
+        region: "eu-west-2"
+        app: "movie-service"
+        env: "movie-service-prod"
