@@ -21,7 +21,7 @@ deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket_name: $AWS_BUCKET_NAME
   region: "eu-west-2"
   app: "movie-service"
   env: "movie-service-prod"
-  bucket_name: "elasticbeanstalk-eu-west-2-729843718962"

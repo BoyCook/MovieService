@@ -25,7 +25,7 @@ public class MovieController {
     }
 
     @RequestMapping("/movies")
-    String home(Model model) {
+    String getMovies(Model model) {
         model.addAttribute("movies", store.getAll());
         return "movies";
     }
