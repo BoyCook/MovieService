@@ -3,6 +3,11 @@ java:
 language: java
 #script: mvn clean package
 
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
+
 before_install:
   - gem install package_cloud
   - sudo apt-get install jq
