@@ -2,11 +2,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/BoyCook/MovieService/badge.svg?branch=master)](https://coveralls.io/github/BoyCook/MovieService?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e59fab65fed4438be24c2b15d1638f0)](https://www.codacy.com/app/BoyCook/MovieService?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BoyCook/MovieService&amp;utm_campaign=Badge_Grade)
 
-### DESCRIPTION
+### Description
 
-A simple movie catalogue service, for use on the developer training day
+A simple movie catalogue service used for developer training
 
-http://movie-service.eu-west-2.elasticbeanstalk.com
+* Test: http://movie-service-test.eu-west-2.elasticbeanstalk.com
+* Prod: http://movie-service.eu-west-2.elasticbeanstalk.com
 
 ### Running
 
