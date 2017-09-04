@@ -14,6 +14,10 @@ Spring Boot
 
     java -jar target/movie-service.jar
 
+Build and run
+
+    mvn clean package && java -jar target/movie-service.jar
+
 ### Building
 
 Tests
