@@ -44,4 +44,4 @@ Publish artifact
 * https://docs.travis-ci.com/user/build-stages/
 * https://github.com/cfpb/jmeter-bootstrap
 * https://spring.io/guides/gs/securing-web/
-
+* https://spring.io/guides/gs/accessing-data-rest/

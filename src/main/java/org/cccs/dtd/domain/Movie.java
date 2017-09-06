@@ -1,24 +1,40 @@
 package org.cccs.dtd.domain;
 
-import java.util.UUID;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by boycook on 04/02/2014.
  */
-public class Movie extends AbstractEntity implements Entity {
-    public Movie() {
-        this(null, null);
+@Entity
+public class Movie {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
+    private String name;
+    private String description;
+
+    public String getName() {
+        return name;
     }
 
-    public Movie(UUID id) {
-        this(id, null, null);
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Movie(String name, String description) {
-        this(UUID.randomUUID(), name, description);
+    public String getDescription() {
+        return description;
     }
 
-    protected Movie(UUID id, String name, String description) {
-        super(id, name, description, Type.MOVIE);
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public long getId() {
+        return id;
     }
 }
