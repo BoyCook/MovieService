@@ -17,9 +17,7 @@ public class MovieController {
     @Autowired
     private MovieRepository repository;
 
-    @RequestMapping("/movies")
     String getMovies(Model model) {
-        model.addAttribute("movies", repository.findAll());
-        return "movies";
+        return "movie";
     }
 }

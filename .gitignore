@@ -3,3 +3,5 @@ target
 .DS_Store
 apache-jmeter-3.0
 jmeter.log
+node_modules
+src/main/resources/static

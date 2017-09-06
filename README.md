@@ -10,16 +10,6 @@ A simple movie catalogue service used for developer training
 * Test: http://movie-service-test.eu-west-2.elasticbeanstalk.com
 * Prod: http://movie-service.eu-west-2.elasticbeanstalk.com
 
-### Running
-
-Spring Boot
-
-    java -jar target/movie-service.jar --server.port=5000
-
-Build and run
-
-    mvn clean package && java -jar target/movie-service.jar --server.port=5000
-
 ### Building
 
 Tests
@@ -34,6 +24,26 @@ Publish artifact
  
     mvn -s .travis.settings.xml clean deploy
 
+### Setup
+
+Create DB
+
+    mysql -u root < scripts/create_db.sql 
+
+Remove DB
+
+    mysql -u root < scripts/delete_db.sql 
+
+### Running
+
+Spring Boot
+
+    java -jar target/movie-service.jar --server.port=5000
+
+Build and run
+
+    mvn clean package && java -jar target/movie-service.jar --server.port=5000
+
 ### References
 
 * https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
@@ -46,3 +56,5 @@ Publish artifact
 * https://spring.io/guides/gs/securing-web/
 * https://spring.io/guides/gs/accessing-data-rest/
 * https://spring.io/guides/gs/accessing-data-mysql/
+* https://spring.io/guides/gs/handling-form-submission/
+* https://spring.io/guides/tutorials/react-and-spring-data-rest/

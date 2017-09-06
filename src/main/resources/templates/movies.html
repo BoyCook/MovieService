@@ -1,24 +1,22 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Movies</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Movie Service</title>
+    <link rel="stylesheet" href="css/default.css"/>
 </head>
 <body>
 
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="movie: ${movies}">
-        <td th:text="${movie.name}">Name</td>
-        <td th:text="${movie.description}">Description</td>
-    </tr>
-    </tbody>
-</table>
+<div>
+    Hello, <span th:text="${#authentication.name}">user</span>.
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Log Out"/>
+    </form>
+</div>
+
+<div id="react"></div>
+
+<script src="built/bundle.js"></script>
+
 </body>
 </html>
