@@ -24,11 +24,6 @@ public class MovieController {
         this.store.addItem(new Movie("Star Wars I", "The Phantom Menace"));
     }
 
-    @RequestMapping("/")
-    String index() {
-        return "index";
-    }
-
     @RequestMapping("/movies")
     String getMovies(Model model) {
         model.addAttribute("movies", store.getAll());

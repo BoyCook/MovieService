@@ -43,3 +43,5 @@ Publish artifact
 * https://renzo.lucioni.xyz/s3-deployment-with-travis/
 * https://docs.travis-ci.com/user/build-stages/
 * https://github.com/cfpb/jmeter-bootstrap
+* https://spring.io/guides/gs/securing-web/
+
