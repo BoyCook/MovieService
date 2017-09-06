@@ -23,18 +23,18 @@ jobs:
 #    - stage: publish artifact
 #      script: mvn -s .travis.settings.xml deploy
 #      skip_cleanup: true
-    - stage: deploy to test
-      script: mvn package
-      deploy:
-        provider: elasticbeanstalk
-        skip_cleanup: true
-        zip_file: target/movie-service.jar
-        access_key_id: $AWS_ACCESS_KEY_ID
-        secret_access_key: $AWS_SECRET_ACCESS_KEY
-        bucket_name: $AWS_BUCKET_NAME
-        region: "eu-west-2"
-        app: "movie-service"
-        env: "movie-service-test"
+#    - stage: deploy to test
+#      script: mvn package
+#      deploy:
+#        provider: elasticbeanstalk
+#        skip_cleanup: true
+#        zip_file: target/movie-service.jar
+#        access_key_id: $AWS_ACCESS_KEY_ID
+#        secret_access_key: $AWS_SECRET_ACCESS_KEY
+#        bucket_name: $AWS_BUCKET_NAME
+#        region: "eu-west-2"
+#        app: "movie-service"
+#        env: "movie-service-test"
 #    - stage: performance test
 #      script:
 #        - rm -rf results && mkdir results
