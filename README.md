@@ -58,3 +58,4 @@ Build and run
 * https://spring.io/guides/gs/accessing-data-mysql/
 * https://spring.io/guides/gs/handling-form-submission/
 * https://spring.io/guides/tutorials/react-and-spring-data-rest/
+* https://www.codesandnotes.be/2015/02/05/spring-securitys-csrf-protection-for-rest-services-the-client-side-and-the-server-side/

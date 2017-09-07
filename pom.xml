@@ -66,6 +66,11 @@
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.allanditzel</groupId>
+            <artifactId>spring-security-csrf-token-filter</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
