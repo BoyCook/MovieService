@@ -1,22 +1,21 @@
 pipeline {
     agent any
   
+    tools {
+        maven "M3"
+    }
+    
     stages {
-        stage('Initialize') {
-            steps {
-                mvnHome = tool 'M3'
-            }
-        }
 
         stage('Build') {
             steps {
-                sh "'${mvnHome}/bin/mvn' clean package"
+                sh "mvn clean package"
             }
         }
 
         stage('Code Quality') {
             steps {
-                sh "'${mvnHome}/bin/mvn' cobertura:cobertura"
+                sh "mvn cobertura:cobertura"
             }
         }
   
