@@ -28,4 +28,14 @@ public class Movie {
         this.name = name;
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", version=" + version +
+                '}';
+    }
 }

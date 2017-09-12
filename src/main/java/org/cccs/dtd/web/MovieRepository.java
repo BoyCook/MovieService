@@ -1,4 +1,4 @@
-package org.cccs.dtd.persistence;
+package org.cccs.dtd.web;
 
 import org.cccs.dtd.domain.Movie;
 import org.springframework.data.repository.PagingAndSortingRepository;

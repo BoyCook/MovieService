@@ -5,3 +5,4 @@ apache-jmeter-3.0
 jmeter.log
 node_modules
 src/main/resources/static
+run.pid

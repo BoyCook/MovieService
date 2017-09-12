@@ -46,16 +46,26 @@ Build and run
 
 ### References
 
-* https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
-* https://docs.travis-ci.com/user/deployment/elasticbeanstalk/#Environment-variables
-* https://console.aws.amazon.com/iam/home?#/security_credential
-* https://github.com/metaeducation/ren-c/wiki/Create-Travis-s3-Deployment-Credentials
-* https://renzo.lucioni.xyz/s3-deployment-with-travis/
-* https://docs.travis-ci.com/user/build-stages/
-* https://github.com/cfpb/jmeter-bootstrap
+##### Spring
+
 * https://spring.io/guides/gs/securing-web/
 * https://spring.io/guides/gs/accessing-data-rest/
 * https://spring.io/guides/gs/accessing-data-mysql/
 * https://spring.io/guides/gs/handling-form-submission/
 * https://spring.io/guides/tutorials/react-and-spring-data-rest/
 * https://www.codesandnotes.be/2015/02/05/spring-securitys-csrf-protection-for-rest-services-the-client-side-and-the-server-side/
+
+### AWS
+
+* https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
+* https://docs.travis-ci.com/user/deployment/elasticbeanstalk/#Environment-variables
+* https://console.aws.amazon.com/iam/home?#/security_credential
+* https://github.com/metaeducation/ren-c/wiki/Create-Travis-s3-Deployment-Credentials
+* https://renzo.lucioni.xyz/s3-deployment-with-travis/
+* https://docs.travis-ci.com/user/build-stages/
+
+##### Testing
+
+* http://www.baeldung.com/spring-boot-testing
+* https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html
+* https://github.com/cfpb/jmeter-bootstrap

@@ -1,7 +1,7 @@
 package org.cccs.dtd.persistence;
 
 import org.cccs.dtd.domain.Movie;
-import org.cccs.dtd.persistence.MovieRepository;
+import org.cccs.dtd.web.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

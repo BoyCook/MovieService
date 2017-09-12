@@ -23,9 +23,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .loginPage("/login")
             .permitAll()
             .and()
-//            .httpBasic()
-//            .and()
-//            .csrf().disable()
             .addFilterAfter(new CsrfTokenResponseHeaderBindingFilter(), CsrfFilter.class)
             .logout()
             .permitAll();
