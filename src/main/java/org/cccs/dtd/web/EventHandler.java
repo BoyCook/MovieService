@@ -47,7 +47,7 @@ public class EventHandler {
     /**
      * Take an {@link Movie} and get the URI using Spring Data REST's {@link EntityLinks}.
      *
-     * @param Movie
+     * @param movie
      */
     private String getPath(Movie movie) {
         return this.entityLinks.linkForSingleResource(movie.getClass(),
