@@ -19,7 +19,7 @@ env: JMETER_PATH=./
 jobs:
   include:
     - stage: test
-      script: mvn test cobertura:cobertura coveralls:cobertura && java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l java -r target/site/cobertura/coverage.xml
+      script: mvn clean cobertura:cobertura coveralls:report && java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l java -r target/site/cobertura/coverage.xml
 #    - stage: publish artifact
 #      script: mvn -s .travis.settings.xml deploy
 #      skip_cleanup: true
