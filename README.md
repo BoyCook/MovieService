@@ -12,8 +12,6 @@ A simple movie catalogue service used for developer training
 
 ### Commands 
 
-##### Building
-
 Tests
 
     mvn clean test
@@ -26,8 +24,6 @@ Publish artifact
  
     mvn -s .travis.settings.xml clean deploy
 
-##### Setup
-
 Create DB
 
     mysql -u root < scripts/create_db.sql 
@@ -36,9 +32,7 @@ Remove DB
 
     mysql -u root < scripts/delete_db.sql 
 
-##### Running
-
-Spring Boot
+Running Spring Boot
 
     java -jar target/movie-service.jar --server.port=5000
 
@@ -46,7 +40,7 @@ Build and run
 
     mvn clean package && java -jar target/movie-service.jar --server.port=5000
 
-##### Sync with code.red
+Sync repo with code.red
 
     git remote add upstream ssh://git@git.code.red:7999/cr/poc-pipeline-movie-service.git
     git pull upstream master
@@ -62,7 +56,7 @@ Build and run
 * https://spring.io/guides/tutorials/react-and-spring-data-rest/
 * https://www.codesandnotes.be/2015/02/05/spring-securitys-csrf-protection-for-rest-services-the-client-side-and-the-server-side/
 
-### AWS
+##### AWS
 
 * https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
 * https://docs.travis-ci.com/user/deployment/elasticbeanstalk/#Environment-variables
