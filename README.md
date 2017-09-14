@@ -10,7 +10,9 @@ A simple movie catalogue service used for developer training
 * Test: http://movie-service-test.eu-west-2.elasticbeanstalk.com
 * Prod: http://movie-service.eu-west-2.elasticbeanstalk.com
 
-### Building
+### Commands 
+
+##### Building
 
 Tests
 
@@ -24,7 +26,7 @@ Publish artifact
  
     mvn -s .travis.settings.xml clean deploy
 
-### Setup
+##### Setup
 
 Create DB
 
@@ -34,7 +36,7 @@ Remove DB
 
     mysql -u root < scripts/delete_db.sql 
 
-### Running
+##### Running
 
 Spring Boot
 
@@ -43,6 +45,11 @@ Spring Boot
 Build and run
 
     mvn clean package && java -jar target/movie-service.jar --server.port=5000
+
+##### Sync with code.red
+
+    git remote add upstream ssh://git@git.code.red:7999/cr/poc-pipeline-movie-service.git
+    git pull upstream master
 
 ### References
 
