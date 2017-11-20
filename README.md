@@ -10,7 +10,7 @@ A simple movie catalogue service used for developer training
 * Test: http://movie-service-test.eu-west-2.elasticbeanstalk.com
 * Prod: http://movie-service.eu-west-2.elasticbeanstalk.com
 
-### Commands 
+### Commands
 
 Tests
 
@@ -19,18 +19,18 @@ Tests
 Coverage
 
     mvn clean cobertura:cobertura
-    
+
 Publish artifact
- 
+
     mvn -s .travis.settings.xml clean deploy
 
 Create DB
 
-    mysql -u root < scripts/create_db.sql 
+    mysql -u root < scripts/create_db.sql
 
 Remove DB
 
-    mysql -u root < scripts/delete_db.sql 
+    mysql -u root < scripts/delete_db.sql
 
 Running Spring Boot
 
@@ -39,6 +39,13 @@ Running Spring Boot
 Build and run
 
     mvn clean package && java -jar target/movie-service.jar --server.port=5000
+
+Sonar Cloud
+
+    mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.organization=boycook_github \
+        -Dsonar.login=$SONAR_LOGIN
 
 Sync repo with code.red
 

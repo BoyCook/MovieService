@@ -23,6 +23,8 @@ jobs:
 #    - stage: publish artifact
 #      script: mvn -s .travis.settings.xml deploy
 #      skip_cleanup: true
+    - stage: sonar scan
+      script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=boycook-github -Dsonar.login=$SONAR_LOGIN
     - stage: deploy to test
       script: mvn package
       deploy:
